@@ -24,7 +24,7 @@ export default function Footer() {
       </a>
       <br />
       <a
-        href="https://github.com/mariafeminina06/MariaEscalante-WeatherApp"
+        href="https://github.com/mariafeminina06/react-app"
         target="_blank"
         rel="noreferrer"
         className="github-link"
