@@ -1,0 +1,28 @@
+.Forecast .forecastImage {
+  width: 350px;
+  display: block;
+  margin: 20px auto;
+}
+
+.Forecast .following-days {
+  align-content: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+.Forecast .following-days .day {
+  font-size: 20px;
+}
+
+.Forecast .following-days .fas {
+  color: #1559bf;
+  font-size: 50px;
+}
+
+.Forecast .card-forecast {
+  height: 300px;
+}
+
+.Forecast .daily-icon {
+  width: 80px;
+}

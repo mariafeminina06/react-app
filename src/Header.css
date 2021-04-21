@@ -1,0 +1,60 @@
+.Header {
+  margin: 30px auto 20px;
+  background-image: url(./img/WeatherHeader.jpg);
+  border-radius: 8px;
+  background-color: orangered;
+  background-size: auto;
+  background-position: bottom;
+  width: 900px;
+  height: 600px;
+  box-shadow: 0 3.1px 4.2px -3px rgba(0, 0, 0, 0.157),
+    0 8.6px 11.5px -3px rgba(0, 0, 0, 0.225),
+    0 20.8px 27.7px -3px rgba(0, 0, 0, 0.293),
+    0 69px 92px -3px rgba(0, 0, 0, 0.45);
+}
+
+.Header h1,
+.Header h2 {
+  margin: 0 auto;
+  width: 800px;
+  height: 300px;
+  text-align: center;
+  color: #ffffff;
+  position: relative;
+  z-index: 2;
+  background-image: linear-gradient(
+    to top,
+    #fcc5e4 0%,
+    #fda34b 15%,
+    #f7eef0 35%,
+    #c8699e 52%,
+    #090b54 71%,
+    #0c1db8 87%,
+    #020f75 100%
+  );
+  width: auto;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.Header h1 {
+  font-family: "Shippori Mincho", serif;
+  padding-top: 200px;
+  font-size: 65px;
+  top: 10px;
+}
+
+.Header h2 {
+  font-family: "Italianno", cursive;
+  font-size: 50px;
+  bottom: 5px;
+}
+
+.Header .box {
+  background: linear-gradient(to left, #0c0c0cce, #77757560, #0c0c0cce);
+  width: 900px;
+  height: 250px;
+  position: relative;
+  bottom: 430px;
+}

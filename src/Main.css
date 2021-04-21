@@ -1,0 +1,16 @@
+.Main {
+  border: 3px solid grey;
+  border-radius: 10px;
+  margin-left: 10px;
+  padding: 20px;
+  width: 875px;
+  box-shadow: 0 3.1px 4.2px -3px rgba(0, 0, 0, 0.157),
+    0 8.6px 11.5px -3px rgba(0, 0, 0, 0.225),
+    0 20.8px 27.7px -3px rgba(0, 0, 0, 0.293),
+    0 69px 92px -3px rgba(0, 0, 0, 0.45);
+}
+
+.Main .card {
+  background-color: #ffffff67;
+  padding: 20px 5px;
+}

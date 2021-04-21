@@ -1,0 +1,30 @@
+.Footer {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  color: #ffffff67;
+}
+
+.Footer .contact {
+  background: none;
+  border: none;
+  margin: 5px auto;
+}
+
+.Footer .linkedin {
+  width: 200px;
+  border: none;
+  filter: drop-shadow(0 5px 3px black);
+  padding-left: 10px;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.Footer .github-link {
+  color: #ffffff67;
+  text-decoration: none;
+}
+
+.Footer .github-link:hover {
+  color: #ffffff67;
+  text-decoration: underline;
+}

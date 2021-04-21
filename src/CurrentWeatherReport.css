@@ -1,0 +1,69 @@
+.Search .btn-secondary {
+  position: relative;
+  right: 55px;
+}
+
+.Search .btn-primary {
+  position: relative;
+  right: 100px;
+}
+
+.Search .current-time {
+  text-align: left;
+  margin-top: 8px;
+  font-size: 18px;
+}
+
+.CurrentWeatherReport h3 {
+  font-family: "Shippori Mincho", serif;
+  margin: 30px 50px;
+  text-align: left;
+}
+
+.CurrentWeatherReport p {
+  text-align: left;
+}
+
+.CurrentWeatherReport a {
+  text-decoration: none;
+}
+
+.CurrentWeatherReport ul {
+  list-style: none;
+  text-align: left;
+  position: relative;
+  top: 30px;
+}
+
+.CurrentWeatherReport .date {
+  margin-left: 50px;
+}
+
+.CurrentWeatherReport .current-weather {
+  text-align: center;
+  margin-left: 50px;
+}
+
+.CurrentWeatherReport .current-weather-icon {
+  display: block;
+  width: 200px;
+  margin: 0;
+  position: relative;
+  left: 40px;
+  bottom: 10px;
+}
+
+.CurrentWeatherReport .current-temperature {
+  font-size: 100px;
+}
+
+.CurrentWeatherReport .degree-units {
+  position: relative;
+  bottom: 60px;
+}
+
+.CurrentWeatherReport .active,
+.CurrentWeatherReport .active:hover {
+  color: #212529;
+  cursor: default;
+}
