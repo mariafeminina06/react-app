@@ -30,7 +30,7 @@ export default function GetData() {
     console.log(response.data);
     setCurrentWeatherData({
       loaded: true,
-      city: response.data.name,
+      cityDisplay: response.data.name,
       country: response.data.sys.country,
       weatherDescription: response.data.weather[0].description,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
