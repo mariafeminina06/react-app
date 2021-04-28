@@ -3,6 +3,8 @@ import axios from "axios";
 import CurrentWeatherReport from "./CurrentWeatherReport";
 import LocalDate from "./LocalDate";
 
+import "./Search.css";
+
 export default function GetData() {
   const [city, setCity] = useState("Tokyo");
   const [currentWeatherData, setCurrentWeatherData] = useState({
