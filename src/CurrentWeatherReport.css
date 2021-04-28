@@ -1,20 +1,10 @@
-.Search .btn-secondary {
-  position: relative;
-  right: 55px;
-}
-
-.Search .btn-primary {
-  position: relative;
-  right: 100px;
-}
-
 .CurrentWeatherReport h3 {
   font-family: "Shippori Mincho", serif;
   margin: 30px 50px;
   text-align: left;
 }
 
-.CurrentWeatherReport p {
+.CurrentWeatherReport .time {
   text-align: left;
 }
 

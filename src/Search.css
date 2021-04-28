@@ -1,0 +1,9 @@
+.Search .btn-secondary {
+  position: relative;
+  right: 55px;
+}
+
+.Search .btn-primary {
+  position: relative;
+  right: 100px;
+}

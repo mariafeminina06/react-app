@@ -1,6 +1,6 @@
 import React from "react";
 
-import CurrentWeatherReport from "./CurrentWeatherReport";
+import Search from "./Search";
 import Forecast from "./Forecast";
 
 import "./Main.css";
@@ -8,7 +8,7 @@ import "./Main.css";
 export default function Main() {
   return (
     <div className="Main">
-      <CurrentWeatherReport />
+      <Search />
       <Forecast />
     </div>
   );
