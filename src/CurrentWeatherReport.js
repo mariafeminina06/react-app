@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./CurrentWeatherReport.css";
+import "./LocalDate";
+import LocalDate from "./LocalDate";
 
 export default function CurrentWeatherReport() {
   const [currentWeatherData, setCurrentWeatherData] = useState({
@@ -37,8 +39,7 @@ export default function CurrentWeatherReport() {
               </div>
             </form>
             <h6 id="current-time" className="current-time">
-              Today is <strong>30 March 2021</strong>. <br />
-              It is currently <strong>13:46</strong>.
+              <LocalDate />
             </h6>
           </div>
         </div>
