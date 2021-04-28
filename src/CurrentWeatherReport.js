@@ -3,6 +3,7 @@ import axios from "axios";
 import "./CurrentWeatherReport.css";
 import "./LocalDate";
 import LocalDate from "./LocalDate";
+import ForeignTimezone from "./ForeignTimezone";
 
 export default function CurrentWeatherReport() {
   const [currentWeatherData, setCurrentWeatherData] = useState({
@@ -53,9 +54,6 @@ export default function CurrentWeatherReport() {
       loaded: true,
       city: response.data.name,
       country: response.data.sys.country,
-      localTime: "20:12",
-      localDay: "Tuesday",
-      localDate: "30 March 2021",
       weatherDescription: response.data.weather[0].description,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
       currentCelsiusTemp: Math.round(response.data.main.temp),
@@ -64,6 +62,7 @@ export default function CurrentWeatherReport() {
       currentCelsiusMin: Math.round(response.data.main.temp_min),
       humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
+      timezone: response.data.timezone * 1000,
     });
   }
 
@@ -80,14 +79,7 @@ export default function CurrentWeatherReport() {
                 </h3>
                 <div className="date">
                   <p>
-                    Local Time: <strong>{currentWeatherData.localTime}</strong>
-                    <br />
-                    Local Date:{" "}
-                    <strong>
-                      {currentWeatherData.localDay},{" "}
-                      {currentWeatherData.localDate}{" "}
-                    </strong>
-                    <br />
+                    <ForeignTimezone timezone={currentWeatherData.timezone} />
                     <span className="weather-description">
                       {currentWeatherData.weatherDescription}
                     </span>

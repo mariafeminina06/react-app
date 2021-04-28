@@ -1,9 +1,6 @@
 import React from "react";
-import "./LocalDate.css";
 
-export default function LocalDate() {
-  let now = new Date();
-
+export default function ForeignTimezone({ timezone }) {
   function formatCalendarDate(date) {
     let days = [
       "Sunday",
@@ -53,10 +50,17 @@ export default function LocalDate() {
     return `${hours}:${minutes}`;
   }
 
+  let now = new Date();
+  let localTime = now.getTime();
+  let localOffset = now.getTimezoneOffset() * 60000;
+  let utc = localTime + localOffset;
+  let foreignTime = new Date(utc + timezone);
+
   return (
-    <div className="LocalDate">
-      Today is <strong>{formatCalendarDate(now)}</strong>. <br />
-      It is currently <strong>{formatHours(now)}</strong> in your location.
+    <div className="ForeignTimezone">
+      Local Time: <strong>{formatHours(foreignTime)}</strong>
+      <br />
+      Local Date: <strong>{formatCalendarDate(foreignTime)}</strong>
     </div>
   );
 }
