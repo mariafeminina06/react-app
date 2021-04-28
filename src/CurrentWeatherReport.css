@@ -11,17 +11,3 @@
 .CurrentWeatherReport .date {
   margin-left: 50px;
 }
-
-.CurrentWeatherReport .current-weather {
-  text-align: center;
-  margin-left: 50px;
-}
-
-.CurrentWeatherReport .current-weather-icon {
-  display: block;
-  width: 200px;
-  margin: 0;
-  position: relative;
-  left: 40px;
-  bottom: 10px;
-}

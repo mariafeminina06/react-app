@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import ForeignTimezone from "./ForeignTimezone";
 import CurrentTemperature from "./CurrentTemperature";
 import "./CurrentWeatherReport.css";
