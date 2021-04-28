@@ -80,7 +80,7 @@ export default function CurrentWeatherReport({ data }) {
           <div className="card main-section">
             <div className="card-body">
               <h3>
-                {data.city}, {data.country}
+                {data.cityDisplay}, {data.country}
               </h3>
               <div className="date">
                 <div className="time">
