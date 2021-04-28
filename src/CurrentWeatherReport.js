@@ -3,28 +3,9 @@ import axios from "axios";
 import "./CurrentWeatherReport.css";
 
 export default function CurrentWeatherReport() {
-  const [loaded, setLoaded] = useState(false);
-  const [currentWeatherData, setCurrentWeatherData] = useState({});
-
-  function handleResponse(response) {
-    setLoaded(true);
-    console.log(response.data);
-    setCurrentWeatherData({
-      city: response.data.name,
-      country: response.data.sys.country,
-      localTime: "20:12",
-      localDay: "Tuesday",
-      localDate: "30 March 2021",
-      weatherDescription: response.data.weather[0].description,
-      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
-      currentCelsiusTemp: Math.round(response.data.main.temp),
-      celsiusFeels: Math.round(response.data.main.feels_like),
-      currentCelsiusMax: Math.round(response.data.main.temp_max),
-      currentCelsiusMin: Math.round(response.data.main.temp_min),
-      humidity: response.data.main.humidity,
-      wind: response.data.wind.speed,
-    });
-  }
+  const [currentWeatherData, setCurrentWeatherData] = useState({
+    loaded: false,
+  });
 
   let searchform = (
     <div className="Search">
@@ -65,7 +46,27 @@ export default function CurrentWeatherReport() {
     </div>
   );
 
-  if (loaded) {
+  function handleResponse(response) {
+    console.log(response.data);
+    setCurrentWeatherData({
+      loaded: true,
+      city: response.data.name,
+      country: response.data.sys.country,
+      localTime: "20:12",
+      localDay: "Tuesday",
+      localDate: "30 March 2021",
+      weatherDescription: response.data.weather[0].description,
+      iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
+      currentCelsiusTemp: Math.round(response.data.main.temp),
+      celsiusFeels: Math.round(response.data.main.feels_like),
+      currentCelsiusMax: Math.round(response.data.main.temp_max),
+      currentCelsiusMin: Math.round(response.data.main.temp_min),
+      humidity: response.data.main.humidity,
+      wind: response.data.wind.speed,
+    });
+  }
+
+  if (currentWeatherData.loaded) {
     return (
       <div>
         {searchform}
