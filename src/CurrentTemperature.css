@@ -1,0 +1,39 @@
+.CurrentTemperature a {
+  text-decoration: none;
+}
+
+.CurrentTemperature ul {
+  list-style: none;
+  text-align: left;
+  position: relative;
+  top: 30px;
+}
+
+.CurrentTemperature .current-weather {
+  text-align: center;
+  margin-left: 50px;
+}
+
+.CurrentTemperature .current-weather-icon {
+  display: block;
+  width: 200px;
+  margin: 0;
+  position: relative;
+  left: 40px;
+  bottom: 10px;
+}
+
+.CurrentTemperature .current-temperature {
+  font-size: 90px;
+}
+
+.CurrentTemperature .degree-units {
+  position: relative;
+  bottom: 60px;
+}
+
+.CurrentTemperature .active,
+.CurrentTemperature .active:hover {
+  color: #212529;
+  cursor: default;
+}
