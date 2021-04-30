@@ -40,7 +40,6 @@ export default function GetData() {
   }
 
   function handleResponse(response) {
-    console.log(response.data);
     setCurrentWeatherData({
       loaded: true,
       cityDisplay: response.data.name,
