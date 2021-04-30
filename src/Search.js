@@ -12,8 +12,20 @@ export default function GetData() {
     loaded: false,
   });
 
+  let apiKey = "c92de5786a79d17709375c8c4a5c958a";
+
+  function getNavigation() {
+    navigator.geolocation.getCurrentPosition(getLocation);
+  }
+
+  function getLocation(position) {
+    let latitude = position.coords.latitude;
+    let longitude = position.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
   function search() {
-    let apiKey = "c92de5786a79d17709375c8c4a5c958a";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -62,7 +74,11 @@ export default function GetData() {
                   </div>
                 </div>
                 <div className="col-2">
-                  <button type="button" className="btn btn-secondary">
+                  <button
+                    type="button"
+                    className="btn btn-secondary"
+                    onClick={getNavigation}
+                  >
                     <i className="fas fa-map-marker-alt"></i>
                   </button>
                 </div>
