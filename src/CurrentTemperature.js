@@ -36,7 +36,7 @@ export default function CurrentTemperature({
           <div className="row">
             {icon}
             <div className="col-4">
-              <span className="current-temperature">{temp}</span>
+              <span className="current-temperature">{Math.round(temp)}</span>
               <span className="degree-units">
                 °C |
                 <a href="/" onClick={showFahrenheit}>
@@ -46,9 +46,9 @@ export default function CurrentTemperature({
             </div>
             <div className="col-5">
               <ul>
-                <li>Feels like: {feels}°</li>
-                <li>Min: {min}°</li>
-                <li>Max: {max}°</li>
+                <li>Feels like: {Math.round(feels)}°</li>
+                <li>Min: {Math.round(min)}°</li>
+                <li>Max: {Math.round(max)}°</li>
                 <li>Humidity: {humidity}%</li>
                 <li>Wind: {wind} km/h</li>
               </ul>

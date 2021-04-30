@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import axios from "axios";
-import CurrentWeatherReport from "./CurrentWeatherReport";
 import LocalDate from "./LocalDate";
+import CurrentWeatherReport from "./CurrentWeatherReport";
+import Forecast from "./Forecast";
 
 import "./Search.css";
 
@@ -34,13 +35,11 @@ export default function GetData() {
       country: response.data.sys.country,
       weatherDescription: response.data.weather[0].description,
       iconUrl: `https://openweathermap.org/img/wn/${response.data.weather[0].icon}.png`,
-      currentCelsiusTemp: Math.round(response.data.main.temp),
-      celsiusFeels: Math.round(response.data.main.feels_like),
-      currentCelsiusMax: Math.round(response.data.main.temp_max),
-      currentCelsiusMin: Math.round(response.data.main.temp_min),
+      temperature: response.data.main,
       humidity: response.data.main.humidity,
       wind: Math.round(response.data.wind.speed),
       timezone: response.data.timezone * 1000,
+      coordinates: response.data.coord,
     });
   }
 
@@ -88,6 +87,7 @@ export default function GetData() {
       <div>
         {searchform}
         <CurrentWeatherReport data={currentWeatherData} />
+        <Forecast coordinates={currentWeatherData.coordinates} />
       </div>
     );
   } else {

@@ -25,10 +25,10 @@ export default function CurrentWeatherReport({ data }) {
               <CurrentTemperature
                 src={data.iconUrl}
                 alt={data.weatherDescription}
-                temp={data.currentCelsiusTemp}
-                feels={data.celsiusFeels}
-                min={data.currentCelsiusMin}
-                max={data.currentCelsiusMax}
+                temp={data.temperature.temp}
+                feels={data.temperature.feels_like}
+                min={data.temperature.temp_min}
+                max={data.temperature.temp_max}
                 humidity={data.humidity}
                 wind={data.wind}
               />
