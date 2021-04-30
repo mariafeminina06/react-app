@@ -42,6 +42,8 @@ export default function Forecast({ coordinates }) {
                         <ForecastDaily data={dailyForecast} />
                       </div>
                     );
+                  } else {
+                    return null;
                   }
                 })}
               </div>
