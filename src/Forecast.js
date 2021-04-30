@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 import "./Forecast.css";
@@ -8,6 +8,10 @@ export default function Forecast({ coordinates }) {
   const [forecast, setForecast] = useState({
     loaded: false,
   });
+
+  useEffect(() => {
+    setForecast({ loaded: false });
+  }, [coordinates]);
 
   function handleForecastResponse(response) {
     console.log(response.data);
