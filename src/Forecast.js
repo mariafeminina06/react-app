@@ -13,11 +13,12 @@ export default function Forecast({ coordinates }) {
     console.log(response.data);
     setForecast({
       loaded: true,
-      dailyForecast: response.data.daily,
+      dailyForecastData: response.data.daily,
     });
   }
 
   if (forecast.loaded) {
+    let dailyForecast = forecast.dailyForecastData;
     return (
       <div className="Forecast">
         <div className="following-days">
@@ -30,21 +31,15 @@ export default function Forecast({ coordinates }) {
                 className="forecastImage"
               />
               <div className="row">
-                <div className="col">
-                  <ForecastDaily data={forecast.dailyForecast[1]} />
-                </div>
-                <div className="col">
-                  <ForecastDaily data={forecast.dailyForecast[2]} />
-                </div>
-                <div className="col">
-                  <ForecastDaily data={forecast.dailyForecast[3]} />
-                </div>
-                <div className="col">
-                  <ForecastDaily data={forecast.dailyForecast[4]} />
-                </div>
-                <div className="col">
-                  <ForecastDaily data={forecast.dailyForecast[5]} />
-                </div>
+                {dailyForecast.map(function (dailyForecast, index) {
+                  if (index > 0 && index < 6) {
+                    return (
+                      <div className="col" key={index}>
+                        <ForecastDaily data={dailyForecast} />
+                      </div>
+                    );
+                  }
+                })}
               </div>
             </div>
           </div>
